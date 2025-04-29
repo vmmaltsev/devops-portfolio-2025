@@ -53,7 +53,6 @@ terraform.tfvars
 terraform.tfvars.json
 
 # ---> Kubernetes
-*.yaml
 *.yml
 *.json
 *.tpl
