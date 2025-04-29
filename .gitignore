@@ -1,0 +1,73 @@
+# ---> Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.coverprofile
+bin/
+pkg/
+vendor/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---> Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+.venv/
+.pytest_cache/
+.coverage
+.tox/
+.nox/
+instance/
+.webassets-cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.pyre/
+
+# ---> Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+
+# ---> Kubernetes
+*.yaml
+*.yml
+*.json
+*.tpl
+.chart/
+kubeconfig
+
+# ---> Environment Variables
+.env
+.env.*
+
+# ---> Common Global
+*.log
+.DS_Store
+Thumbs.db
+*~
+*.bak
+*.tmp
