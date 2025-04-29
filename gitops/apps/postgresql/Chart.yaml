@@ -6,4 +6,13 @@ version: 0.1.0
 dependencies:
   - name: postgresql
     version: 15.5.2
-    repository: https://charts.bitnami.com/bitnami 
+    repository: https://charts.bitnami.com/bitnami
+    #import-values:
+    #  - child: auth.username
+    #    parent: username
+    #  - child: auth.password
+    #    parent: password
+    #  - child: auth.database
+    #    parent: database
+    #  - child: auth.existingSecret
+    #    parent: existingSecret 
