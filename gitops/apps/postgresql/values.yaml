@@ -116,27 +116,29 @@ image:
 ## ref: https://github.com/bitnami/containers/tree/main/bitnami/postgresql#creating-a-database-user-on-first-run
 ##
 auth:
-  # Включаем встроенного пользователя "postgres"
+  ## включаем работу с пользователем postgres
   enablePostgresUser: true
 
-  # Настройки вашего приложения (имена пользователей и БД),
-  # пароли для них будут браться из существующего секрета:
-  username: "myuser"
-  database: "mydb"
-  replicationUsername: "repl_user"
-
-  # Используем уже созданный секрет postgresql-secret
+  ## указываем, что хотим не создавать секрет, а взять уже существующий
   existingSecret: "postgresql-secret"
   createSecret: false
 
-  # Читаем пароли не из ENV, а из файлов, смонтированных из секрета
+  ## берем пароли не из ENV, а из файлов, смонтированных из секрета
   usePasswordFiles: true
 
-  # Соответствие ключей в секрете → файлам/переменным внутри контейнера
+  ## соответствие ключей в секрете → именам переменных
   secretKeys:
+    # для "postgres" (админ)
     adminPasswordKey:       "postgres-password"
+    # для вашего пользователя myuser
     userPasswordKey:        "password"
+    # для репликационного пользователя repl_user
     replicationPasswordKey: "replication-password"
+
+  ## (опционально) параметры создания доп. пользователя/БД
+  username:           "myuser"
+  database:           "mydb"
+  replicationUsername:"repl_user"
 ## @param architecture PostgreSQL architecture (`standalone` or `replication`)
 ##
 architecture: standalone
