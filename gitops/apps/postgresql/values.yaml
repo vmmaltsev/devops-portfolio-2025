@@ -129,7 +129,7 @@ auth:
   createSecret: false
 
   # Берём пароли не из файлов, а из ENV
-  usePasswordFiles: false
+  usePasswordFiles: true
 
   # Соответствие ключей в секрете → переменным
   secretKeys:
